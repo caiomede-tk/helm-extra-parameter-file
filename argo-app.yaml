@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-example
+  annotations:
+    argocd-image-updater.argoproj.io/api.helm.image-name: image.repository
+    argocd-image-updater.argoproj.io/api.helm.image-tag: image.tag
+    argocd-image-updater.argoproj.io/api.update-strategy: semver
+    argocd-image-updater.argoproj.io/api.force-update: "true"
+spec:
+  destination:
+    namespace: nginx-example
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: nginx-example
+    repoURL: https://github.com/caiomede-tk/helm-extra-parameter-file
+    targetRevision: main
