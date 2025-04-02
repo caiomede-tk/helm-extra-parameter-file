@@ -1,4 +1,4 @@
 helm:
   parameters:
   - name: image.tag
-    value: 1.27.4
+    value: 1.26.0
