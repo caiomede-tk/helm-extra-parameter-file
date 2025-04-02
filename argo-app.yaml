@@ -5,6 +5,8 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: argocd
     argocd-image-updater.argoproj.io/image-list: nginx=nginx:^1.26.0
+    argocd-image-updater.argoproj.io/nginx.helm.image-name: image.repository
+    argocd-image-updater.argoproj.io/nginx.helm.image-tag: image.tag 
     argocd-image-updater.argoproj.io/nginx.update-strategy: semver
     argocd-image-updater.argoproj.io/nginx.force-update: "true"
 spec:
