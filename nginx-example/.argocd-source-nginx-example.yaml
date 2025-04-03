@@ -1,7 +1,7 @@
 helm:
   parameters:
   - name: image.tag
-    value: 1.26.3-alpine3.20-perl
+    value: 1.27.4
     forcestring: true
   - name: image.repository
     value: nginx
